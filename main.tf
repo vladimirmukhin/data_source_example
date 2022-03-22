@@ -28,9 +28,10 @@ data "aws_ami" "ubuntu" {
 
 data "aws_ami" "amazonlinux" {
   most_recent = true
+
   filter {
     name   = "name"
-    values = ["amzn2-ami-*"]
+    values = ["amzn2-ami-kernel-*"]
   }
 
   filter {
@@ -38,7 +39,7 @@ data "aws_ami" "amazonlinux" {
     values = ["hvm"]
   }
 
-  owners = ["aws-marketplace"]
+  owners = ["137112412989"]
 }
 
 data "aws_ami" "redhat" {
